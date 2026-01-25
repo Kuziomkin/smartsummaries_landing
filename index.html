@@ -1,20 +1,26 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Smart Summaries - AI Document Analysis</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Smart Summaries - Understand Documents Fast</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#6366F1", // Electric Indigo
+                        "primary": "#00796B", // Custom Teal
                         "slate-900": "#0F172A", // Deep Slate
                         "slate-800": "#1E293B", // River Blue
                         "slate-600": "#475569", // Slate Gray
@@ -25,25 +31,28 @@
                         "display": ["Inter", "sans-serif"],
                         "body": ["Plus Jakarta Sans", "sans-serif"],
                     },
-                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
                 },
             },
         }
     </script>
-<style>
+    <style>
         .text-gradient {
-            background: linear-gradient(to right, #6366F1, #10B981);
+            background: linear-gradient(to right, #00796B, #10B981);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
         .glass-card {
             background: rgba(255, 255, 255, 0.6);
             backdrop-filter: blur(12px);
             border: 1px solid #E2E8F0;
         }
+
         .hero-shadow {
             box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.15);
         }
+
         .card-hover:hover {
             box-shadow: 0 10px 40px -10px rgba(99, 102, 241, 0.15);
             border-color: rgba(99, 102, 241, 0.3);
@@ -51,315 +60,320 @@
         }
     </style>
 </head>
-<body class="bg-white text-slate-900 font-display antialiased overflow-x-hidden">
-<header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex items-center justify-between h-16">
-<div class="flex items-center gap-2">
-<div class="size-8 rounded-lg bg-gradient-to-br from-indigo-500 to-indigo-700 flex items-center justify-center text-white">
-<span class="material-symbols-outlined text-xl">description</span>
-</div>
-<span class="font-bold text-lg tracking-tight text-slate-900">Smart Summaries</span>
-</div>
-<nav class="hidden md:flex items-center gap-8">
-<a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors" href="#how-it-works">How It Works</a>
-<a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors" href="#features">Features</a>
-<a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors" href="#pricing">Pricing</a>
-</nav>
-<div class="flex items-center gap-4">
-<a class="hidden sm:flex items-center justify-center rounded-full bg-primary hover:bg-indigo-700 transition-colors h-10 px-5 text-sm font-bold text-white shadow-lg shadow-indigo-500/20" href="#">
-                        Download App
-                    </a>
-</div>
-</div>
-</div>
-</header>
-<section class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-white">
-<div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-indigo-50 blur-[100px] rounded-full pointer-events-none opacity-60"></div>
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
-<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-100 mb-8 animate-fade-in">
-<span class="flex h-2 w-2 rounded-full bg-indigo-500"></span>
-<span class="text-indigo-600 text-xs font-semibold tracking-wide uppercase">AI Document Analysis</span>
-</div>
-<h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] mb-6 max-w-4xl mx-auto text-slate-900">
-                Turn Confusing Paperwork into
-                <span class="text-gradient block mt-2">Instant Clarity</span>
-</h1>
-<p class="text-lg sm:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-                The AI pocket lawyer that scans contracts, highlights risks, and explains legal jargon in plain English. No law degree required.
-            </p>
-<div class="flex flex-col sm:flex-row items-center gap-4 mb-16">
-<button class="flex items-center justify-center gap-2 h-12 px-8 rounded-full bg-primary hover:bg-indigo-700 text-white font-bold text-base transition-all shadow-lg shadow-indigo-500/25 hover:scale-105">
-<span class="material-symbols-outlined">download_for_offline</span>
-<span>Download for iOS</span>
-</button>
-<button class="flex items-center justify-center gap-2 h-12 px-8 rounded-full bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 font-medium text-base transition-all shadow-sm">
-<span class="material-symbols-outlined">play_circle</span>
-<span>See how it works</span>
-</button>
-</div>
-<div class="relative mx-auto w-full max-w-[320px] aspect-[9/16] rounded-[2.5rem] bg-slate-900 border-8 border-slate-900 shadow-2xl hero-shadow overflow-hidden">
-<div class="absolute inset-0 bg-slate-50 w-full h-full flex flex-col" data-alt="Smartphone screen showing a scanned document with highlighted text and AI summary overlay">
-<div class="h-1/2 bg-slate-100 p-6 flex items-center justify-center border-b border-slate-200">
-<div class="w-3/4 h-3/4 bg-white rounded-lg border border-slate-200 p-4 space-y-2 shadow-sm">
-<div class="h-2 w-full bg-slate-100 rounded"></div>
-<div class="h-2 w-2/3 bg-slate-100 rounded"></div>
-<div class="h-2 w-full bg-slate-100 rounded"></div>
-<div class="h-2 w-4/5 bg-indigo-100 rounded"></div>
-<div class="h-2 w-full bg-slate-100 rounded"></div>
-</div>
-</div>
-<div class="h-1/2 bg-white p-6 flex flex-col gap-4">
-<div class="flex items-center gap-3">
-<div class="size-8 rounded-full bg-indigo-50 flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-lg">auto_awesome</span>
-</div>
-<span class="text-sm font-semibold text-slate-900">AI Analysis</span>
-</div>
-<div class="space-y-3">
-<div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
-<div class="flex items-center gap-2 mb-1">
-<span class="material-symbols-outlined text-emerald-500 text-sm">check_circle</span>
-<span class="text-xs font-bold text-slate-800">Terms are standard</span>
-</div>
-<p class="text-[10px] text-slate-500 leading-normal">This lease agreement follows standard residential protocols.</p>
-</div>
-<div class="p-3 rounded-xl bg-rose-50 border border-rose-100">
-<div class="flex items-center gap-2 mb-1">
-<span class="material-symbols-outlined text-rose-500 text-sm">warning</span>
-<span class="text-xs font-bold text-slate-800">Risk Detected</span>
-</div>
-<p class="text-[10px] text-slate-500 leading-normal">Automatic renewal clause found in section 4.2.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<div class="py-10 border-y border-slate-100 bg-white">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<p class="text-center text-sm font-medium text-slate-500 mb-8 uppercase tracking-wider">Trusted by Freelancers and Expats Worldwide</p>
-<div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-<span class="text-xl font-bold text-slate-800">TechCrunch</span>
-<span class="text-xl font-bold text-slate-800">ProductHunt</span>
-<span class="text-xl font-bold text-slate-800">TheVerge</span>
-<span class="text-xl font-bold text-slate-800">Wired</span>
-</div>
-</div>
-</div>
-<section class="py-24 bg-slate-50 relative" id="how-it-works">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center mb-16">
-<h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900">Three Simple Steps</h2>
-<p class="text-slate-600 text-lg max-w-2xl mx-auto">From confusing paper to peace of mind in seconds.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
-<div class="flex flex-col items-center text-center p-8 rounded-2xl bg-white border border-slate-200 relative group hover:shadow-xl hover:shadow-indigo-500/5 transition-all duration-300">
-<div class="size-16 rounded-full bg-indigo-50 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-3xl">photo_camera</span>
-</div>
-<h3 class="text-xl font-bold text-slate-900 mb-2">1. Snap a Photo</h3>
-<p class="text-slate-600">Take a picture of any contract, letter, or official document instantly.</p>
-<div class="absolute top-8 right-8 text-6xl font-black text-slate-100 select-none -z-10">01</div>
-</div>
-<div class="flex flex-col items-center text-center p-8 rounded-2xl bg-white border border-slate-200 relative group hover:shadow-xl hover:shadow-indigo-500/5 transition-all duration-300">
-<div class="size-16 rounded-full bg-indigo-50 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-3xl">auto_awesome</span>
-</div>
-<h3 class="text-xl font-bold text-slate-900 mb-2">2. AI Analysis</h3>
-<p class="text-slate-600">Our advanced AI scans for risks, hidden fees, and key terms in seconds.</p>
-<div class="absolute top-8 right-8 text-6xl font-black text-slate-100 select-none -z-10">02</div>
-</div>
-<div class="flex flex-col items-center text-center p-8 rounded-2xl bg-white border border-slate-200 relative group hover:shadow-xl hover:shadow-indigo-500/5 transition-all duration-300">
-<div class="size-16 rounded-full bg-indigo-50 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-3xl">verified_user</span>
-</div>
-<h3 class="text-xl font-bold text-slate-900 mb-2">3. Get Answers</h3>
-<p class="text-slate-600">Receive a clear summary and actionable advice in plain language.</p>
-<div class="absolute top-8 right-8 text-6xl font-black text-slate-100 select-none -z-10">03</div>
-</div>
-</div>
-</div>
-</section>
-<section class="py-24 bg-white relative overflow-hidden" id="features">
-<div class="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-50 blur-[120px] rounded-full pointer-events-none opacity-60"></div>
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-<div class="text-center mb-16">
-<h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900">Powerful Features</h2>
-<p class="text-slate-600 text-lg max-w-2xl mx-auto">Designed to make legal documents accessible to everyone.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-<div class="glass-card p-8 rounded-[2rem] flex flex-col gap-6 md:col-span-1 card-hover transition-all">
-<div class="size-12 rounded-full bg-indigo-50 flex items-center justify-center text-primary">
-<span class="material-symbols-outlined">translate</span>
-</div>
-<div>
-<h3 class="text-2xl font-bold text-slate-900 mb-2">Jargon Buster</h3>
-<p class="text-slate-600">Don't know what "Indemnification" means? Tap any word for an instant, simple definition.</p>
-</div>
-<div class="mt-auto pt-4">
-<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-indigo-50 border border-indigo-100">
-<span class="text-xs text-indigo-600 font-mono">"Force Majeure" → "Unforeseeable Events"</span>
-</div>
-</div>
-</div>
-<div class="glass-card p-8 rounded-[2rem] flex flex-col gap-6 md:col-span-1 card-hover transition-all">
-<div class="size-12 rounded-full bg-rose-50 flex items-center justify-center text-rose-500">
-<span class="material-symbols-outlined">radar</span>
-</div>
-<div>
-<h3 class="text-2xl font-bold text-slate-900 mb-2">Risk Radar</h3>
-<p class="text-slate-600">Automatically spots potential traps, hidden fees, and unfavorable clauses before you sign.</p>
-</div>
-<div class="mt-auto pt-4">
-<div class="flex items-center gap-2">
-<span class="size-2 rounded-full bg-rose-500 animate-pulse"></span>
-<span class="text-xs text-rose-500 font-semibold uppercase tracking-wider">High Risk Detected</span>
-</div>
-</div>
-</div>
-<div class="glass-card p-8 rounded-[2rem] flex flex-col gap-6 md:col-span-1 card-hover transition-all">
-<div class="size-12 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-500">
-<span class="material-symbols-outlined">public</span>
-</div>
-<div>
-<h3 class="text-2xl font-bold text-slate-900 mb-2">Translate Reality</h3>
-<p class="text-slate-600">Moving abroad? Translate and summarize foreign rental agreements instantly.</p>
-</div>
-</div>
-<div class="glass-card p-8 rounded-[2rem] flex flex-col gap-6 md:col-span-1 card-hover transition-all">
-<div class="size-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-600">
-<span class="material-symbols-outlined">lock</span>
-</div>
-<div>
-<h3 class="text-2xl font-bold text-slate-900 mb-2">Bank-Grade Security</h3>
-<p class="text-slate-600">Your documents are processed with AES-256 encryption. We never store your sensitive data.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="py-24 bg-slate-50">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center mb-12">
-<h2 class="text-3xl font-bold mb-4 text-slate-900">Who is this for?</h2>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="group relative overflow-hidden rounded-3xl bg-white p-8 hover:bg-white hover:shadow-xl transition-all border border-slate-200 hover:border-indigo-200">
-<div class="mb-4">
-<span class="material-symbols-outlined text-4xl text-primary mb-4">flight_takeoff</span>
-<h3 class="text-xl font-bold text-slate-900">Expats</h3>
-</div>
-<p class="text-slate-600 mb-6">Understand rental agreements and bureaucratic letters in any language instantly.</p>
-<a class="inline-flex items-center text-primary font-semibold hover:text-indigo-700 transition-colors" href="#">
-                        Learn more <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
-</a>
-</div>
-<div class="group relative overflow-hidden rounded-3xl bg-white p-8 hover:bg-white hover:shadow-xl transition-all border border-slate-200 hover:border-indigo-200">
-<div class="mb-4">
-<span class="material-symbols-outlined text-4xl text-primary mb-4">work_history</span>
-<h3 class="text-xl font-bold text-slate-900">Freelancers</h3>
-</div>
-<p class="text-slate-600 mb-6">Spot unfair IP clauses and payment terms in client contracts before you sign.</p>
-<a class="inline-flex items-center text-primary font-semibold hover:text-indigo-700 transition-colors" href="#">
-                        Learn more <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
-</a>
-</div>
-<div class="group relative overflow-hidden rounded-3xl bg-white p-8 hover:bg-white hover:shadow-xl transition-all border border-slate-200 hover:border-indigo-200">
-<div class="mb-4">
-<span class="material-symbols-outlined text-4xl text-primary mb-4">home</span>
-<h3 class="text-xl font-bold text-slate-900">Tenants</h3>
-</div>
-<p class="text-slate-600 mb-6">Know your rights on deposits, repairs, and evictions without hiring a lawyer.</p>
-<a class="inline-flex items-center text-primary font-semibold hover:text-indigo-700 transition-colors" href="#">
-                        Learn more <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
-</a>
-</div>
-</div>
-</div>
-</section>
-<section class="py-24 bg-white" id="pricing">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center mb-16">
-<h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900">Simple, Transparent Pricing</h2>
-<p class="text-slate-600 text-lg">Start for free, upgrade for peace of mind.</p>
-</div>
-<div class="flex flex-col md:flex-row justify-center items-center gap-8 max-w-4xl mx-auto">
-<div class="w-full md:w-1/2 p-8 rounded-3xl bg-white border border-slate-200 flex flex-col h-full">
-<h3 class="text-xl font-semibold text-slate-900 mb-2">Starter</h3>
-<div class="flex items-baseline gap-1 mb-6">
-<span class="text-4xl font-bold text-slate-900">Free</span>
-</div>
-<ul class="space-y-4 mb-8 flex-1">
-<li class="flex items-center gap-3 text-slate-600">
-<span class="material-symbols-outlined text-emerald-500 text-xl">check</span>
-                            3 Document Scans / mo
-                        </li>
-<li class="flex items-center gap-3 text-slate-600">
-<span class="material-symbols-outlined text-emerald-500 text-xl">check</span>
-                            Basic Summary
-                        </li>
-<li class="flex items-center gap-3 text-slate-600">
-<span class="material-symbols-outlined text-emerald-500 text-xl">check</span>
-                            Jargon Buster
-                        </li>
-</ul>
-<button class="w-full py-3 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-900 font-bold transition-colors">
-                        Get Started
-                    </button>
-</div>
-<div class="w-full md:w-1/2 p-8 rounded-3xl bg-white border-2 border-primary relative flex flex-col h-full shadow-2xl shadow-indigo-500/15">
-<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
-                        Most Popular
-                    </div>
-<h3 class="text-xl font-semibold text-slate-900 mb-2">Unlimited</h3>
-<div class="flex items-baseline gap-1 mb-6">
-<span class="text-4xl font-bold text-slate-900">$9.99</span>
-<span class="text-slate-500">/month</span>
-</div>
-<ul class="space-y-4 mb-8 flex-1">
-<li class="flex items-center gap-3 text-slate-700 font-medium">
-<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-                            Unlimited Scans
-                        </li>
-<li class="flex items-center gap-3 text-slate-700 font-medium">
-<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-                            Advanced Risk Detection
-                        </li>
-<li class="flex items-center gap-3 text-slate-700 font-medium">
-<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-                            Language Translation
-                        </li>
-<li class="flex items-center gap-3 text-slate-700 font-medium">
-<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-                            Priority Support
-                        </li>
-</ul>
-<button class="w-full py-3 rounded-full bg-primary hover:bg-indigo-700 text-white font-bold transition-colors shadow-lg shadow-indigo-500/25">
-                        Upgrade to Pro
-                    </button>
-</div>
-</div>
-</div>
-</section>
-<footer class="bg-slate-100 border-t border-slate-200 py-12">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-8">
-<div class="flex items-center gap-2">
-<div class="size-6 rounded bg-indigo-600 flex items-center justify-center text-white">
-<span class="material-symbols-outlined text-sm">description</span>
-</div>
-<span class="font-bold text-slate-900 tracking-tight">Smart Summaries</span>
-</div>
-<div class="flex gap-8">
-<a class="text-sm text-slate-600 hover:text-slate-900 transition-colors" href="#">Privacy Policy</a>
-<a class="text-sm text-slate-600 hover:text-slate-900 transition-colors" href="#">Terms of Service</a>
-<a class="text-sm text-slate-600 hover:text-slate-900 transition-colors" href="#">Support</a>
-</div>
-<div class="text-sm text-slate-500">
-                © 2024 Smart Summaries Inc.
-            </div>
-</div>
-</footer>
 
-</body></html>
+<body class="bg-white text-slate-900 font-display antialiased overflow-x-hidden">
+    <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-2">
+                    <img src="assets/1024.png" alt="Logo" class="size-8 rounded-lg" />
+                    <span class="font-bold text-lg tracking-tight text-slate-900">Smart Summaries</span>
+                </div>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors"
+                        href="#how-it-works">How It Works</a>
+                    <a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors"
+                        href="#features">Features</a>
+                    <a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors"
+                        href="#pricing">Pricing</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <a class="hidden sm:flex items-center justify-center rounded-full bg-primary hover:bg-teal-700 transition-colors h-10 px-5 text-sm font-bold text-white shadow-lg shadow-teal-500/20"
+                        href="#">
+                        Get the app
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-white">
+        <div
+            class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-teal-50 blur-[100px] rounded-full pointer-events-none opacity-60">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
+            <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 border border-teal-100 mb-8 animate-fade-in">
+                <span class="flex h-2 w-2 rounded-full bg-teal-500"></span>
+                <span class="text-teal-600 text-xs font-semibold tracking-wide uppercase">Document Interpreter</span>
+            </div>
+            <h1
+                class="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] mb-6 max-w-4xl mx-auto text-slate-900">
+                Understand any document
+                <span class="text-gradient block mt-2">in 60 seconds</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+                An AI document iFnterpreter that explains what your paperwork says.<br />
+                Plain-language summaries and translations from photos. No legal knowledge required.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center gap-4 mb-16">
+                <button
+                    class="flex items-center justify-center gap-2 h-12 px-8 rounded-full bg-primary hover:bg-teal-700 text-white font-bold text-base transition-all shadow-lg shadow-teal-500/25 hover:scale-105">
+                    <span class="material-symbols-outlined">download_for_offline</span>
+                    <span>Download for iOS</span>
+                </button>
+                <button
+                    class="flex items-center justify-center gap-2 h-12 px-8 rounded-full bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 font-medium text-base transition-all shadow-sm">
+                    <span class="material-symbols-outlined">play_circle</span>
+                    <span>See how it works</span>
+                </button>
+            </div>
+            <div
+                class="relative mx-auto w-full max-w-[320px] aspect-[9/16] rounded-[2.5rem] bg-slate-900 border-8 border-slate-900 shadow-2xl hero-shadow overflow-hidden">
+                <div class="absolute inset-0 bg-slate-50 w-full h-full flex flex-col" <div
+                    class="absolute inset-0 bg-black w-full h-full">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/iGL81g2i6CE?rel=0"
+                        title="Smart Summaries Demo" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Before/After section placeholder -->
+    <section class="py-24 bg-slate-50 relative" id="how-it-works">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900">Three Simple Steps</h2>
+                <p class="text-slate-600 text-lg max-w-2xl mx-auto">Take a photo. Get a clear summary, translation, and
+                    what to review next.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+                <div
+                    class="flex flex-col items-center text-center p-8 rounded-2xl bg-white border border-slate-200 relative group hover:shadow-xl hover:shadow-teal-500/5 transition-all duration-300">
+                    <div
+                        class="size-16 rounded-full bg-teal-50 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">photo_camera</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">1. Snap a Photo</h3>
+                    <p class="text-slate-600">Snap any letter, invoice, contract, or form. Works with screenshots too.
+                    </p>
+                    <div class="absolute top-8 right-8 text-6xl font-black text-slate-100 select-none -z-10">01</div>
+                </div>
+                <div
+                    class="flex flex-col items-center text-center p-8 rounded-2xl bg-white border border-slate-200 relative group hover:shadow-xl hover:shadow-teal-500/5 transition-all duration-300">
+                    <div
+                        class="size-16 rounded-full bg-teal-50 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">auto_awesome</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">2. Get the Summary</h3>
+                    <p class="text-slate-600">Smart Summaries extracts the text and understands the context.</p>
+                    <div class="absolute top-8 right-8 text-6xl font-black text-slate-100 select-none -z-10">02</div>
+                </div>
+                <div
+                    class="flex flex-col items-center text-center p-8 rounded-2xl bg-white border border-slate-200 relative group hover:shadow-xl hover:shadow-teal-500/5 transition-all duration-300">
+                    <div
+                        class="size-16 rounded-full bg-teal-50 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">verified_user</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">3. Get Answers</h3>
+                    <p class="text-slate-600">Get a plain summary, highlighted key points, and what to review next.</p>
+                    <div class="absolute top-8 right-8 text-6xl font-black text-slate-100 select-none -z-10">03</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-24 bg-white relative overflow-hidden" id="features">
+        <div
+            class="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] bg-teal-50 blur-[120px] rounded-full pointer-events-none opacity-60">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900">Powerful Features</h2>
+                <p class="text-slate-600 text-lg max-w-2xl mx-auto">Designed to help you understand paperwork quickly
+                    and calmly.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+                <div class="glass-card p-8 rounded-[2rem] flex flex-col gap-6 md:col-span-1 card-hover transition-all">
+                    <div class="size-12 rounded-full bg-teal-50 flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined">translate</span>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2">Explain in plain language</h3>
+                        <p class="text-slate-600">Tap any complex term for an instant, simple definition.</p>
+                    </div>
+                    <div class="mt-auto pt-4">
+                    </div>
+                </div>
+                <div class="glass-card p-8 rounded-[2rem] flex flex-col gap-6 md:col-span-1 card-hover transition-all">
+                    <div class="size-12 rounded-full bg-teal-50 flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined">radar</span>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2">Key points highlighter</h3>
+                        <p class="text-slate-600">Highlights important sections and points that may need attention.</p>
+                    </div>
+                    <div class="mt-auto pt-4">
+                        <div class="flex items-center gap-2">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card p-8 rounded-[2rem] flex flex-col gap-6 md:col-span-1 card-hover transition-all">
+                    <div class="size-12 rounded-full bg-teal-50 flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined">public</span>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2">Translate any document</h3>
+                        <p class="text-slate-600">Instantly translate and summarize documents in any language.</p>
+                    </div>
+                </div>
+                <div class="glass-card p-8 rounded-[2rem] flex flex-col gap-6 md:col-span-1 card-hover transition-all">
+                    <div class="size-12 rounded-full bg-teal-50 flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined">lock</span>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2">Saved on your device</h3>
+                        <p class="text-slate-600">Your simplified documents are kept locally. History stays on your
+                            phone.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4 text-slate-900">Who is this for?</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div
+                    class="group relative overflow-hidden rounded-3xl bg-white p-8 hover:bg-white hover:shadow-xl transition-all border border-slate-200 hover:border-teal-200">
+                    <div class="mb-4">
+                        <span class="material-symbols-outlined text-4xl text-primary mb-4">flight_takeoff</span>
+                        <h3 class="text-xl font-bold text-slate-900">Expats</h3>
+                    </div>
+                    <p class="text-slate-600 mb-6">Translate and extract key details from residency forms, rental
+                        contracts, and local bureaucracy.</p>
+                    <a class="inline-flex items-center text-primary font-semibold hover:text-teal-700 transition-colors"
+                        href="#">
+                        Learn more <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+                    </a>
+                </div>
+                <div
+                    class="group relative overflow-hidden rounded-3xl bg-white p-8 hover:bg-white hover:shadow-xl transition-all border border-slate-200 hover:border-teal-200">
+                    <div class="mb-4">
+                        <span class="material-symbols-outlined text-4xl text-primary mb-4">work_history</span>
+                        <h3 class="text-xl font-bold text-slate-900">Freelancers</h3>
+                    </div>
+                    <p class="text-slate-600 mb-6">Understand project scope and payment terms in client contracts
+                        instantly.</p>
+                    <a class="inline-flex items-center text-primary font-semibold hover:text-teal-700 transition-colors"
+                        href="#">
+                        Learn more <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+                    </a>
+                </div>
+                <div
+                    class="group relative overflow-hidden rounded-3xl bg-white p-8 hover:bg-white hover:shadow-xl transition-all border border-slate-200 hover:border-teal-200">
+                    <div class="mb-4">
+                        <span class="material-symbols-outlined text-4xl text-primary mb-4">home</span>
+                        <h3 class="text-xl font-bold text-slate-900">Tenants</h3>
+                    </div>
+                    <p class="text-slate-600 mb-6">Understand the key points of your lease, from deposit return to
+                        maintenance rules.</p>
+                    <a class="inline-flex items-center text-primary font-semibold hover:text-teal-700 transition-colors"
+                        href="#">
+                        Learn more <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-24 bg-white" id="pricing">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900">Simple, Transparent Pricing</h2>
+                <p class="text-slate-600 text-lg">Start for free, upgrade for peace of mind.</p>
+            </div>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8 max-w-4xl mx-auto">
+                <!-- Weekly Card -->
+                <div
+                    class="w-full md:w-1/2 p-8 rounded-3xl bg-white border border-slate-200 flex flex-col h-full hover:border-teal-200 transition-colors">
+                    <h3 class="text-xl font-semibold text-slate-900 mb-2">Weekly</h3>
+                    <div class="flex items-baseline gap-1 mb-1">
+                        <span class="text-4xl font-bold text-slate-900">$5.99</span>
+                        <span class="text-slate-500">/week</span>
+                    </div>
+                    <div class="text-sm text-teal-600 font-bold mb-6">3-Day Free Trial</div>
+                    <ul class="space-y-4 mb-8 flex-1">
+                        <li class="flex items-center gap-3 text-slate-600">
+                            <span class="material-symbols-outlined text-teal-500 text-xl">check</span>
+                            Explained in seconds
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-600">
+                            <span class="material-symbols-outlined text-teal-500 text-xl">check</span>
+                            Up to 50 scans per day
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-600">
+                            <span class="material-symbols-outlined text-teal-500 text-xl">check</span>
+                            Auto-translate
+                        </li>
+                    </ul>
+                    <button
+                        class="w-full py-3 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-900 font-bold transition-colors">
+                        Start 3-Day Free Trial
+                    </button>
+                </div>
+
+                <!-- Yearly Card -->
+                <div
+                    class="w-full md:w-1/2 p-8 rounded-3xl bg-white border-2 border-primary relative flex flex-col h-full shadow-2xl shadow-teal-500/15">
+                    <div
+                        class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
+                        Save 80%
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-900 mb-2">Yearly</h3>
+                    <div class="flex items-baseline gap-1 mb-1">
+                        <span class="text-4xl font-bold text-slate-900">$29.99</span>
+                        <span class="text-slate-500">/year</span>
+                    </div>
+                    <div class="text-sm text-slate-400 mb-6 line-through">$311.48 / year</div>
+                    <ul class="space-y-4 mb-8 flex-1">
+                        <li class="flex items-center gap-3 text-slate-700 font-medium">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            Explained in seconds
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-700 font-medium">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            Up to 50 scans per day
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-700 font-medium">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            Auto-translate
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-700 font-medium">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            100% private
+                        </li>
+                    </ul>
+                    <button
+                        class="w-full py-3 rounded-full bg-primary hover:bg-teal-700 text-white font-bold transition-colors shadow-lg shadow-teal-500/25">
+                        Get Yearly Plan
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-slate-100 border-t border-slate-200 py-12">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-2">
+                <div class="size-6 rounded bg-teal-600 flex items-center justify-center text-white">
+                    <span class="material-symbols-outlined text-sm">description</span>
+                </div>
+                <span class="font-bold text-slate-900 tracking-tight">Smart Summaries</span>
+            </div>
+            <div class="flex gap-8">
+                <a class="text-sm text-slate-600 hover:text-slate-900 transition-colors" href="#">Privacy Policy</a>
+                <a class="text-sm text-slate-600 hover:text-slate-900 transition-colors" href="#">Terms of Service</a>
+                <a class="text-sm text-slate-600 hover:text-slate-900 transition-colors" href="#">Support</a>
+            </div>
+            <div class="text-sm text-slate-500">
+                © 2026 Smart Summaries
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
